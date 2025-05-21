@@ -7,11 +7,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4 
 
-      - name: Welcome message
-        run: echo "Hello World"
+      - name: List and Read file
+        run: |
+          echo "Hello World"
+          ls -la
+          cat README.md
 
-      - name: list files
-        run: ls -la
-
-      - name: Read file
-        run: cat README.md
+      - name: generate ascii artwork
+        run: cowsay -f dragon "run for cover , i am a dragon" >> dragon.txt
